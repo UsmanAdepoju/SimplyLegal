@@ -1,6 +1,36 @@
 import { Category } from '@/types';
 
 export const categories: Category[] = [
+  // Constitutional Law Categories
+  {
+    id: 'fundamental-rights',
+    name: 'Your Fundamental Rights',
+    description: 'Basic rights every Nigerian is entitled to under the Constitution',
+    icon: '🛡️',
+    color: 'bg-emerald-600',
+  },
+  {
+    id: 'citizenship',
+    name: 'Nigerian Citizenship',
+    description: 'Who is a Nigerian citizen and how citizenship works',
+    icon: '🇳🇬',
+    color: 'bg-green-700',
+  },
+  {
+    id: 'government-duties',
+    name: 'Government Duties to You',
+    description: 'What the government is supposed to do for Nigerians',
+    icon: '🏛️',
+    color: 'bg-teal-600',
+  },
+  {
+    id: 'constitutional-basics',
+    name: 'How Nigeria Works',
+    description: 'The basic structure and principles of the Nigerian government',
+    icon: '📜',
+    color: 'bg-cyan-600',
+  },
+  // Practical Law Categories
   {
     id: 'traffic',
     name: 'Traffic & Road Safety',

@@ -8,6 +8,8 @@ export interface Law {
   penalty?: string;
   keyPoints: string[];
   relatedLaws?: string[];
+  originalText?: string; // The original constitutional text for "Read More" feature
+  section?: string; // Constitutional section reference (e.g., "Section 33")
 }
 
 export interface Category {
