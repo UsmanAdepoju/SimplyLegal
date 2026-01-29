@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import LawCard from '@/components/LawCard';
+import ShareButtons from '@/components/ShareButtons';
 import { categories } from '@/data/categories';
 import { laws, getLawById, getLawsByCategory } from '@/data/laws';
 
@@ -140,6 +141,51 @@ export default async function LawPage({ params }: LawPageProps) {
               </div>
             )}
 
+            {/* Original Constitutional Text - Read More */}
+            {law.originalText && (
+              <div className="mb-8">
+                <details className="group">
+                  <summary className="cursor-pointer bg-blue-50 border border-blue-200 rounded-lg p-4 hover:bg-blue-100 transition-colors">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-semibold text-blue-800 flex items-center">
+                        <span className="mr-2">📜</span>
+                        Read the Original Constitutional Text
+                        {law.section && (
+                          <span className="ml-2 text-sm font-normal text-blue-600">
+                            ({law.section})
+                          </span>
+                        )}
+                      </h3>
+                      <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                        ▼
+                      </span>
+                    </div>
+                    <p className="text-sm text-blue-600 mt-1">
+                      Click to see the exact wording from the Nigerian Constitution
+                    </p>
+                  </summary>
+                  <div className="mt-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                    <div className="prose prose-sm max-w-none">
+                      <p className="text-gray-700 whitespace-pre-line leading-relaxed italic">
+                        &quot;{law.originalText}&quot;
+                      </p>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-4">
+                      — {law.source}
+                    </p>
+                  </div>
+                </details>
+              </div>
+            )}
+
+            {/* Section Reference Badge */}
+            {law.section && (
+              <div className="mb-8 inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">📖</span>
+                Constitutional Reference: {law.section}
+              </div>
+            )}
+
             {/* Source */}
             <div className="bg-gray-100 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Legal Source</h3>
@@ -157,7 +203,10 @@ export default async function LawPage({ params }: LawPageProps) {
           </p>
         </div>
 
-        {/* Share and Navigation */}
+        {/* Share Buttons */}
+        <ShareButtons law={law} />
+
+        {/* Navigation */}
         <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <Link
             href={`/category/${law.category}`}
