@@ -6,298 +6,231 @@ import { getLawsByCategory, laws } from '@/data/laws';
 export default function Home() {
   const totalLaws = laws.length;
 
+  // Get some sample tags for the search section
+  const sampleTags = ['Rights', 'Freedom', 'Arrest', 'Property', 'Marriage', 'Employment', 'Consumer', 'Traffic'];
+
   return (
-    <div className="min-h-screen bg-[#FDF8F3]">
-      {/* Hero Section - Warm and Engaging */}
-      <section className="relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 text-4xl text-[#C4A35A] opacity-30 sparkle">✦</div>
-        <div className="absolute top-20 left-32 text-2xl text-[#C4A35A] opacity-20 sparkle">✦</div>
-        <div className="absolute top-16 right-20 text-3xl text-[#C4A35A] opacity-30 sparkle">✦</div>
-        <div className="absolute top-32 right-40 text-xl text-[#C4A35A] opacity-20 sparkle">✦</div>
-        <div className="absolute bottom-20 left-20 text-2xl text-[#1B4332] opacity-20 sparkle">✦</div>
-        <div className="absolute bottom-10 right-32 text-3xl text-[#1B4332] opacity-20 sparkle">✦</div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Clean like archivi.ng */}
+      <section className="py-16 md:py-24 border-b border-[#E0E0E0]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Main Headline - Bold, italic like archivi.ng */}
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-6 italic"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
+            Nigerian laws, one search away
+          </h1>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
-          <div className="text-center">
-            {/* Tagline */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1B4332]/10 rounded-full mb-6">
-              <span className="text-[#C4A35A] mr-2">✦</span>
-              <span className="text-sm font-medium text-[#1B4332]">
-                For Every Nigerian
-              </span>
-              <span className="text-[#C4A35A] ml-2">✦</span>
-            </div>
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-[#6B6B6B] mb-10 max-w-2xl mx-auto">
+            Explore Nigerian constitutional rights and laws in simple, plain English. Download shareable cards and spread awareness.
+          </p>
 
-            {/* Main Headline */}
-            <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2D2A26] mb-6 leading-tight"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              Know Your Rights,
-              <br />
-              <span className="text-[#1B4332]">In Plain English</span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-[#5a5652] mb-10 max-w-2xl mx-auto leading-relaxed">
-              Nigerian laws explained simply. Download beautiful quote cards and share with friends on WhatsApp.
-            </p>
-
-            {/* Search */}
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-6">
             <SearchBar
-              placeholder="Search for any law..."
-              className="max-w-lg mx-auto mb-8"
+              placeholder='Try: "Right to Life" or "Freedom of Speech"'
+              className="w-full"
             />
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Tag Pills - Like archivi.ng */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {sampleTags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/search?q=${tag}`}
+                className="px-4 py-1.5 border border-[#E0E0E0] rounded-full text-sm text-[#1A1A1A] hover:border-[#008751] hover:text-[#008751] transition-colors"
+              >
+                {tag}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mustard Yellow Section - "Today in History" style */}
+      <section className="py-12 bg-[#D4A843]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="md:w-1/2">
+              <h2
+                className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4 uppercase tracking-wide"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
+                Know Your Rights
+              </h2>
+              <p className="text-[#1A1A1A] mb-6 text-lg">
+                Every Nigerian has fundamental rights protected by the Constitution. Learn what they are and how to exercise them.
+              </p>
               <Link
                 href="/category/fundamental-rights"
-                className="inline-flex items-center px-8 py-4 bg-[#1B4332] text-white font-semibold rounded-full hover:bg-[#2D5A3D] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-block px-6 py-3 bg-[#1A1A1A] text-white font-semibold text-sm uppercase tracking-wide hover:bg-[#008751] transition-colors"
               >
                 Explore Your Rights
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                href="/categories"
-                className="inline-flex items-center px-8 py-4 bg-white text-[#2D2A26] font-semibold rounded-full border-2 border-[#E8DFD5] hover:border-[#C4A35A] transition-all"
-              >
-                Browse All Categories
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Scrolling Law Categories Banner - Like Konsulto */}
-      <section className="py-4 bg-[#C4A35A] overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap flex items-center">
-          {[...categories, ...categories].map((cat, i) => (
-            <span key={i} className="mx-6 text-[#2D2A26] font-medium flex items-center">
-              <span className="mr-2">✦</span>
-              {cat.name}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Quote Card */}
-      <section className="py-16 md:py-24 bg-[#FDF8F3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2
-              className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-4"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              Laws as Shareable Quotes
-            </h2>
-            <p className="text-[#5a5652] max-w-xl mx-auto">
-              Download and share beautiful law cards on social media. Spread legal awareness.
-            </p>
-          </div>
-
-          {/* Example Quote Card */}
-          <div className="max-w-md mx-auto">
-            <div
-              className="bg-[#1B4332] aspect-square rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {/* Decorative */}
-              <div className="absolute top-6 left-6 text-2xl text-[#C4A35A] opacity-60">✦</div>
-              <div className="absolute top-6 right-6 text-2xl text-[#C4A35A] opacity-60">✦</div>
-              <div className="absolute bottom-16 left-8 text-lg text-[#C4A35A] opacity-30">✦</div>
-              <div className="absolute bottom-12 right-10 text-xl text-[#C4A35A] opacity-40">✦</div>
-
-              <div className="h-full flex flex-col justify-center items-center text-center px-4">
-                <div className="text-5xl text-[#C4A35A] opacity-40 mb-2">&ldquo;</div>
-                <p className="text-xl md:text-2xl font-bold leading-tight mb-4">
-                  Every person has the right to life. Nobody can take your life except through a court sentence.
+            <div className="md:w-1/2">
+              {/* Featured Quote Card Preview */}
+              <div className="bg-[#008751] p-6 md:p-8 text-white max-w-sm mx-auto">
+                <p
+                  className="text-xl md:text-2xl font-bold mb-4 leading-tight"
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+                >
+                  &ldquo;Every person has the right to life. Nobody can take your life except through a court sentence.&rdquo;
                 </p>
-                <div className="text-5xl text-[#C4A35A] opacity-40 mb-4">&rdquo;</div>
-                <div className="w-16 h-1 bg-[#C4A35A] rounded-full mb-3" />
-                <p className="text-base font-medium opacity-90">Section 33</p>
-                <div className="absolute bottom-5 left-0 right-0 text-center">
-                  <p className="text-xs tracking-widest uppercase opacity-60">SimplyLegal 🇳🇬</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium opacity-80">— Section 33</span>
+                  <span className="text-xs uppercase tracking-widest opacity-60">Nigerian Constitution</span>
                 </div>
               </div>
             </div>
-
-            <div className="text-center mt-6">
-              <Link
-                href="/category/fundamental-rights"
-                className="inline-flex items-center px-6 py-3 bg-[#2D2A26] text-white font-semibold rounded-full hover:bg-[#1B4332] transition-all shadow-lg"
-              >
-                See All Rights
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Categories Grid */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#C4A35A] font-semibold uppercase tracking-widest text-sm mb-3">
-              ✦ Explore ✦
-            </p>
+      {/* Categories Section - "TOPICS" style from archivi.ng */}
+      <section className="py-16 md:py-24 bg-[#F5F1E8]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
             <h2
-              className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-4"
+              className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-2 uppercase tracking-wide"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
-              Law Categories
+              Categories
             </h2>
-            <p className="text-[#5a5652]">
-              {totalLaws} laws across {categories.length} categories
+            <p className="text-[#6B6B6B]">
+              Explore {totalLaws} laws across {categories.length} categories
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Category Grid - Like archivi.ng Topics */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {categories.map((category, index) => {
               const lawCount = getLawsByCategory(category.id).length;
-              const colors = ['bg-[#1B4332]', 'bg-[#C4A35A]', 'bg-[#C17B5D]', 'bg-[#2D2A26]'];
-              const bgColor = colors[index % colors.length];
+              // Alternate between green, mustard, and dark backgrounds
+              const bgColors = ['bg-[#008751]', 'bg-[#D4A843]', 'bg-[#1A1A1A]', 'bg-[#6B6B6B]'];
+              const textColors = ['text-white', 'text-[#1A1A1A]', 'text-white', 'text-white'];
+              const bgColor = bgColors[index % bgColors.length];
+              const textColor = textColors[index % textColors.length];
 
               return (
                 <Link
                   key={category.id}
                   href={`/category/${category.id}`}
-                  className="group relative overflow-hidden rounded-2xl p-6 bg-[#FFFBF7] border border-[#E8DFD5] hover:border-[#C4A35A] transition-all hover:shadow-lg"
+                  className={`${bgColor} ${textColor} p-6 hover:opacity-90 transition-opacity group`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <span
-                        className={`${bgColor} w-14 h-14 rounded-2xl flex items-center justify-center text-2xl text-white shadow-md`}
-                      >
-                        {category.icon}
-                      </span>
-                      <div>
-                        <h3
-                          className="font-bold text-[#2D2A26] text-lg group-hover:text-[#1B4332] transition-colors"
-                          style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                        >
-                          {category.name}
-                        </h3>
-                        <p className="text-sm text-[#888]">
-                          {lawCount} {lawCount === 1 ? 'law' : 'laws'} explained
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-[#E8DFD5] flex items-center justify-center group-hover:bg-[#C4A35A] transition-colors">
-                      <svg
-                        className="w-5 h-5 text-[#2D2A26] group-hover:text-white transition-colors"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
+                  <span className="text-3xl mb-3 block">{category.icon}</span>
+                  <h3
+                    className="font-bold text-lg mb-1 uppercase tracking-wide"
+                    style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+                  >
+                    {category.name.split(' ')[0]}
+                  </h3>
+                  <p className="text-sm opacity-80">
+                    {lawCount} {lawCount === 1 ? 'law' : 'laws'}
+                  </p>
                 </Link>
               );
             })}
           </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/categories"
+              className="inline-flex items-center px-6 py-3 border-2 border-[#1A1A1A] text-[#1A1A1A] font-semibold text-sm uppercase tracking-wide hover:bg-[#1A1A1A] hover:text-white transition-colors"
+            >
+              See All Categories
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Value Props */}
-      <section className="py-16 md:py-24 bg-[#1B4332] text-white relative overflow-hidden">
-        {/* Decorative */}
-        <div className="absolute top-10 left-10 text-4xl text-[#C4A35A] opacity-20 sparkle">✦</div>
-        <div className="absolute bottom-10 right-10 text-4xl text-[#C4A35A] opacity-20 sparkle">✦</div>
-        <div className="absolute top-1/2 left-1/4 text-2xl text-[#C4A35A] opacity-10">✦</div>
-        <div className="absolute top-1/3 right-1/4 text-3xl text-[#C4A35A] opacity-10">✦</div>
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* How It Works Section */}
+      <section className="py-16 md:py-24 bg-white border-t border-[#E0E0E0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 uppercase tracking-wide"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
-              Why SimplyLegal?
+              How It Works
             </h2>
-            <p className="text-white/70 max-w-xl mx-auto">
-              We believe every Nigerian should understand their rights.
+            <p className="text-[#6B6B6B] max-w-xl mx-auto">
+              We make Nigerian laws accessible to everyone through simple explanations and shareable content.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#C4A35A] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
-                📖
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-[#008751] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+                1
               </div>
               <h3
-                className="text-xl font-bold mb-2"
+                className="font-bold text-lg mb-2 uppercase"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
-                Plain English
+                Read
               </h3>
-              <p className="text-white/70 text-sm">
-                No legal jargon. Just simple words every Nigerian can understand.
+              <p className="text-[#6B6B6B] text-sm">
+                Laws explained in plain English that every Nigerian can understand. No legal jargon.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#C4A35A] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
-                📱
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-[#D4A843] text-[#1A1A1A] text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+                2
               </div>
               <h3
-                className="text-xl font-bold mb-2"
+                className="font-bold text-lg mb-2 uppercase"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
-                Shareable Cards
+                Download
               </h3>
-              <p className="text-white/70 text-sm">
-                Download beautiful quote cards and share on WhatsApp, Instagram, Twitter.
+              <p className="text-[#6B6B6B] text-sm">
+                Save beautiful quote cards as images. Perfect for sharing on social media.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#C4A35A] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
-                📜
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-[#1A1A1A] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+                3
               </div>
               <h3
-                className="text-xl font-bold mb-2"
+                className="font-bold text-lg mb-2 uppercase"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
-                Original Text
+                Share
               </h3>
-              <p className="text-white/70 text-sm">
-                Always see the actual constitutional text with &quot;Read More&quot;.
+              <p className="text-[#6B6B6B] text-sm">
+                Spread awareness on WhatsApp, Instagram, Twitter. Help others know their rights.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 md:py-20 bg-[#FDF8F3]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#C4A35A] font-semibold uppercase tracking-widest text-sm mb-3">
-            ✦ Start Learning ✦
-          </p>
+      {/* Final CTA - Green Section */}
+      <section className="py-16 md:py-20 bg-[#008751] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-6"
+            className="text-3xl md:text-4xl font-bold mb-6 italic"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
-            Ready to Know Your Rights?
+            Ready to know your rights?
           </h2>
-          <p className="text-[#5a5652] mb-8 max-w-xl mx-auto">
-            Start with your fundamental rights as a Nigerian citizen.
+          <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
+            Start with the fundamental rights every Nigerian citizen is entitled to.
           </p>
           <Link
             href="/category/fundamental-rights"
-            className="inline-flex items-center px-8 py-4 bg-[#1B4332] text-white font-semibold rounded-full hover:bg-[#2D5A3D] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-block px-8 py-4 bg-white text-[#008751] font-bold text-sm uppercase tracking-wide hover:bg-[#D4A843] hover:text-[#1A1A1A] transition-colors"
           >
             Explore Fundamental Rights
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
           </Link>
         </div>
       </section>

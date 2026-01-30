@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm, human color palette */
-  --background: #FDF8F3;
-  --foreground: #2D2A26;
-  --cream: #FDF8F3;
-  --warm-white: #FFFBF7;
-  --sand: #E8DFD5;
-  --gold: #C4A35A;
-  --deep-green: #1B4332;
-  --forest: #2D5A3D;
-  --terracotta: #C17B5D;
-  --charcoal: #2D2A26;
+  /* Nigerian-inspired color palette - clean and editorial */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --ng-green: #008751;
+  --ng-green-dark: #006B3F;
+  --mustard: #D4A843;
+  --mustard-light: #E5C76B;
+  --cream: #F5F1E8;
+  --warm-gray: #6B6B6B;
+  --light-gray: #F0F0F0;
+  --border: #E0E0E0;
 }
 
 @theme inline {
@@ -32,20 +32,20 @@ h1, h2, h3, .font-display {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sand);
+  background: var(--light-gray);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--deep-green);
-  border-radius: 4px;
+  background: var(--ng-green);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--forest);
+  background: var(--ng-green-dark);
 }
 
 /* Smooth scroll */
@@ -53,32 +53,27 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
+/* Selection color - Nigerian green */
 ::selection {
-  background-color: var(--gold);
-  color: var(--charcoal);
+  background-color: var(--ng-green);
+  color: white;
 }
 
-/* Decorative sparkle animation */
-@keyframes sparkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.9); }
-}
-
-.sparkle {
-  animation: sparkle 2s ease-in-out infinite;
-}
-
-/* Marquee animation for scrolling text */
+/* Marquee animation */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Nigerian flag stripe pattern for cards */
+.ng-stripe {
+  background: linear-gradient(to right, var(--ng-green) 33.33%, white 33.33%, white 66.66%, var(--ng-green) 66.66%);
 }

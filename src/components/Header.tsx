@@ -7,48 +7,46 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#FDF8F3] border-b border-[#E8DFD5] sticky top-0 z-50">
+    <header className="bg-white border-b border-[#E0E0E0] sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-[#C4A35A] text-xl">✦</span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
             <span
-              className="text-xl font-bold text-[#2D2A26]"
+              className="text-xl font-black tracking-tight text-[#1A1A1A] uppercase"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
-              SimplyLegal
+              SIMPLYLEGAL
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href="/"
-              className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
-            >
-              Home
-            </Link>
-            <Link
               href="/categories"
-              className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+              className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
             >
               Categories
             </Link>
             <Link
               href="/search"
-              className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+              className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
             >
               Search
             </Link>
             <Link
               href="/about"
-              className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+              className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
             >
-              About
+              About Us
             </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/category/fundamental-rights"
-              className="inline-flex items-center px-5 py-2 bg-[#1B4332] text-white font-semibold rounded-full hover:bg-[#2D5A3D] transition-all text-sm"
+              className="px-5 py-2 bg-[#1A1A1A] text-white font-semibold text-sm uppercase tracking-wide hover:bg-[#008751] transition-colors"
             >
               Know Your Rights
             </Link>
@@ -56,7 +54,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-[#2D2A26]"
+            className="md:hidden p-2 text-[#1A1A1A]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -87,39 +85,32 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[#E8DFD5]">
+          <div className="md:hidden py-4 border-t border-[#E0E0E0]">
             <div className="flex flex-col space-y-4">
               <Link
-                href="/"
-                className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
                 href="/categories"
-                className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+                className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Categories
               </Link>
               <Link
                 href="/search"
-                className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+                className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Search
               </Link>
               <Link
                 href="/about"
-                className="text-[#2D2A26] hover:text-[#1B4332] transition-colors font-medium"
+                className="text-[#1A1A1A] hover:text-[#008751] transition-colors font-medium text-sm uppercase tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                About Us
               </Link>
               <Link
                 href="/category/fundamental-rights"
-                className="inline-flex items-center justify-center px-5 py-3 bg-[#1B4332] text-white font-semibold rounded-full hover:bg-[#2D5A3D] transition-all text-sm"
+                className="inline-block px-5 py-3 bg-[#1A1A1A] text-white font-semibold text-sm uppercase tracking-wide text-center hover:bg-[#008751] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Know Your Rights

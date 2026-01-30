@@ -31,7 +31,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const colorSchemes: Array<'green' | 'gold' | 'terracotta' | 'charcoal'> = ['green', 'gold', 'terracotta', 'charcoal'];
+const cardVariants: Array<'green' | 'mustard' | 'dark'> = ['green', 'mustard', 'dark'];
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { id } = await params;
@@ -41,129 +41,73 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  // Get laws and sort alphabetically by title
+  // Get laws and sort alphabetically
   const categoryLaws = getLawsByCategory(id).sort((a, b) =>
     a.title.localeCompare(b.title)
   );
 
-  // Group laws by first letter for alphabetical sections
-  const groupedLaws = categoryLaws.reduce((acc, law) => {
-    const firstLetter = law.title[0].toUpperCase();
-    if (!acc[firstLetter]) {
-      acc[firstLetter] = [];
-    }
-    acc[firstLetter].push(law);
-    return acc;
-  }, {} as Record<string, typeof categoryLaws>);
-
-  const sortedLetters = Object.keys(groupedLaws).sort();
-
   return (
-    <div className="min-h-screen bg-[#FDF8F3]">
-      {/* Header */}
-      <section className="bg-[#1B4332] text-white py-12 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-6 left-10 text-3xl text-[#C4A35A] opacity-30">✦</div>
-        <div className="absolute top-10 right-16 text-2xl text-[#C4A35A] opacity-20">✦</div>
-        <div className="absolute bottom-6 left-20 text-xl text-[#C4A35A] opacity-20">✦</div>
-        <div className="absolute bottom-8 right-10 text-3xl text-[#C4A35A] opacity-30">✦</div>
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="min-h-screen bg-white">
+      {/* Header Section */}
+      <section className="py-12 md:py-16 border-b border-[#E0E0E0]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <div className="flex items-center space-x-2 text-sm mb-6 opacity-80">
-            <Link href="/" className="hover:text-[#C4A35A] transition-colors">
+          <div className="flex items-center space-x-2 text-sm mb-8 text-[#6B6B6B]">
+            <Link href="/" className="hover:text-[#008751] transition-colors">
               Home
             </Link>
-            <span className="text-[#C4A35A]">✦</span>
-            <Link href="/categories" className="hover:text-[#C4A35A] transition-colors">
+            <span>/</span>
+            <Link href="/categories" className="hover:text-[#008751] transition-colors">
               Categories
             </Link>
-            <span className="text-[#C4A35A]">✦</span>
-            <span>{category.name}</span>
+            <span>/</span>
+            <span className="text-[#1A1A1A]">{category.name}</span>
           </div>
 
-          <div className="text-center">
-            <span className="text-6xl mb-6 block">{category.icon}</span>
-            <h1
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              {category.name}
-            </h1>
-            <p className="text-lg opacity-90 max-w-lg mx-auto leading-relaxed">
-              {category.description}
-            </p>
-            <div className="mt-6 inline-flex items-center px-4 py-2 bg-white/10 rounded-full">
-              <span className="text-[#C4A35A] mr-2">✦</span>
-              <span className="text-sm font-medium">
-                {categoryLaws.length} {categoryLaws.length === 1 ? 'law' : 'laws'} explained simply
-              </span>
-              <span className="text-[#C4A35A] ml-2">✦</span>
+          {/* Category Info */}
+          <div className="flex items-start gap-6">
+            <span className="text-5xl">{category.icon}</span>
+            <div>
+              <h1
+                className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-3 uppercase tracking-wide"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
+                {category.name}
+              </h1>
+              <p className="text-lg text-[#6B6B6B] mb-4">
+                {category.description}
+              </p>
+              <p className="text-sm text-[#008751] font-semibold uppercase tracking-wide">
+                {categoryLaws.length} {categoryLaws.length === 1 ? 'law' : 'laws'} explained
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Alphabetical Navigation */}
-      {sortedLetters.length > 3 && (
-        <div className="bg-white border-b border-[#E8DFD5] sticky top-16 z-10">
-          <div className="max-w-4xl mx-auto px-4 py-4">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {sortedLetters.map(letter => (
-                <a
-                  key={letter}
-                  href={`#section-${letter}`}
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-[#FDF8F3] hover:bg-[#1B4332] text-[#2D2A26] hover:text-white text-sm font-semibold transition-all border border-[#E8DFD5] hover:border-[#1B4332]"
-                >
-                  {letter}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Laws - Alphabetically Organized */}
-      <section className="py-12">
+      {/* Laws Section */}
+      <section className="py-12 md:py-16 bg-[#F5F1E8]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {categoryLaws.length > 0 ? (
             <div className="space-y-12">
-              {sortedLetters.map((letter, letterIndex) => (
-                <div key={letter} id={`section-${letter}`}>
-                  {/* Letter Header */}
-                  <div className="flex items-center mb-8">
-                    <span
-                      className="text-4xl font-bold text-[#C4A35A] w-14"
-                      style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                    >
-                      {letter}
-                    </span>
-                    <div className="flex-1 h-px bg-[#E8DFD5] ml-4"></div>
-                  </div>
-
-                  {/* Laws for this letter */}
-                  <div className="space-y-10">
-                    {groupedLaws[letter].map((law, lawIndex) => (
-                      <LawQuoteCard
-                        key={law.id}
-                        law={law}
-                        colorScheme={colorSchemes[(letterIndex + lawIndex) % colorSchemes.length]}
-                      />
-                    ))}
-                  </div>
-                </div>
+              {categoryLaws.map((law, index) => (
+                <LawQuoteCard
+                  key={law.id}
+                  law={law}
+                  variant={cardVariants[index % cardVariants.length]}
+                />
               ))}
             </div>
           ) : (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">📜</div>
-              <p
-                className="text-[#2D2A26] text-xl font-bold mb-2"
+              <h2
+                className="text-2xl font-bold text-[#1A1A1A] mb-2 uppercase"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 Coming Soon
-              </p>
-              <p className="text-[#5a5652]">
+              </h2>
+              <p className="text-[#6B6B6B]">
                 Laws for this category are being prepared. Check back soon!
               </p>
             </div>
@@ -171,39 +115,35 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
 
-      {/* Explore Other Categories */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[#C4A35A] font-semibold uppercase tracking-widest text-sm mb-2">
-              ✦ Keep Exploring ✦
-            </p>
-            <h2
-              className="text-2xl md:text-3xl font-bold text-[#2D2A26]"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              Other Categories
-            </h2>
-          </div>
+      {/* Other Categories Section */}
+      <section className="py-12 md:py-16 bg-white border-t border-[#E0E0E0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-8 uppercase tracking-wide"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
+            Other Categories
+          </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {categories
               .filter(c => c.id !== id)
               .slice(0, 4)
               .map((cat, index) => {
-                const bgColors = ['bg-[#1B4332]', 'bg-[#C4A35A]', 'bg-[#C17B5D]', 'bg-[#2D2A26]'];
+                const bgColors = ['bg-[#008751]', 'bg-[#D4A843]', 'bg-[#1A1A1A]', 'bg-[#6B6B6B]'];
+                const textColors = ['text-white', 'text-[#1A1A1A]', 'text-white', 'text-white'];
                 return (
                   <Link
                     key={cat.id}
                     href={`/category/${cat.id}`}
-                    className={`${bgColors[index % bgColors.length]} text-white rounded-2xl p-5 hover:scale-105 transition-transform text-center shadow-lg`}
+                    className={`${bgColors[index % bgColors.length]} ${textColors[index % textColors.length]} p-5 hover:opacity-90 transition-opacity`}
                   >
-                    <span className="text-3xl block mb-2">{cat.icon}</span>
+                    <span className="text-2xl block mb-2">{cat.icon}</span>
                     <p
-                      className="font-semibold text-sm"
+                      className="font-bold text-sm uppercase tracking-wide"
                       style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                     >
-                      {cat.name}
+                      {cat.name.split(' ')[0]}
                     </p>
                   </Link>
                 );
@@ -213,7 +153,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="text-center mt-8">
             <Link
               href="/categories"
-              className="inline-flex items-center px-6 py-3 bg-[#FDF8F3] text-[#2D2A26] font-semibold rounded-full border-2 border-[#E8DFD5] hover:border-[#C4A35A] transition-all"
+              className="inline-flex items-center px-6 py-3 border-2 border-[#1A1A1A] text-[#1A1A1A] font-semibold text-sm uppercase tracking-wide hover:bg-[#1A1A1A] hover:text-white transition-colors"
             >
               View All Categories
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

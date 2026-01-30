@@ -5,36 +5,34 @@ import { Law } from '@/types';
 
 interface LawQuoteCardProps {
   law: Law;
-  colorScheme?: 'green' | 'gold' | 'terracotta' | 'charcoal';
+  variant?: 'green' | 'mustard' | 'dark';
 }
 
-const colorSchemes = {
+const variants = {
   green: {
-    bg: 'bg-[#1B4332]',
-    accent: '#C4A35A',
+    bg: 'bg-[#008751]',
     text: 'text-white',
+    accent: '#D4A843',
+    accentText: 'text-[#D4A843]',
   },
-  gold: {
-    bg: 'bg-[#C4A35A]',
-    accent: '#1B4332',
-    text: 'text-[#2D2A26]',
+  mustard: {
+    bg: 'bg-[#D4A843]',
+    text: 'text-[#1A1A1A]',
+    accent: '#008751',
+    accentText: 'text-[#008751]',
   },
-  terracotta: {
-    bg: 'bg-[#C17B5D]',
-    accent: '#FDF8F3',
+  dark: {
+    bg: 'bg-[#1A1A1A]',
     text: 'text-white',
-  },
-  charcoal: {
-    bg: 'bg-[#2D2A26]',
-    accent: '#C4A35A',
-    text: 'text-white',
+    accent: '#D4A843',
+    accentText: 'text-[#D4A843]',
   },
 };
 
-export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCardProps) {
+export default function LawQuoteCard({ law, variant = 'green' }: LawQuoteCardProps) {
   const [showReadMore, setShowReadMore] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-  const scheme = colorSchemes[colorScheme];
+  const style = variants[variant];
 
   const handleDownload = async () => {
     if (!cardRef.current) return;
@@ -43,9 +41,7 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
       const html2canvas = (await import('html2canvas')).default;
       const canvas = await html2canvas(cardRef.current, {
         backgroundColor: null,
-        scale: 3, // Higher quality
-        width: 600,
-        height: 600,
+        scale: 3,
       });
 
       const link = document.createElement('a');
@@ -59,7 +55,7 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
   };
 
   const handleShare = async () => {
-    const shareText = `"${law.summary}"\n\n— ${law.section || law.source}\n\nKnow your rights! 🇳🇬\n#SimplyLegal #KnowYourRights #NigerianLaw`;
+    const shareText = `"${law.summary}"\n\n— ${law.section || law.source}\n\nKnow your rights! 🇳🇬\n#SimplyLegal #NigerianLaw #KnowYourRights`;
 
     if (navigator.share) {
       try {
@@ -76,125 +72,80 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
   };
 
   return (
-    <div className="mb-8">
-      {/* SQUARE Visual Quote Card - This is what gets downloaded */}
+    <div className="mb-10">
+      {/* SQUARE Card - Nigerian themed */}
       <div
         ref={cardRef}
-        className={`${scheme.bg} aspect-square w-full max-w-[600px] mx-auto rounded-3xl p-8 md:p-10 ${scheme.text} shadow-2xl relative overflow-hidden`}
+        className={`${style.bg} ${style.text} aspect-square w-full max-w-[500px] mx-auto p-8 md:p-10 relative`}
         style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
       >
-        {/* Decorative Elements - Top Left */}
-        <div className="absolute top-6 left-6 text-2xl opacity-60" style={{ color: scheme.accent }}>
-          ✦
-        </div>
-        <div className="absolute top-12 left-14 text-lg opacity-40" style={{ color: scheme.accent }}>
-          ✦
-        </div>
-
-        {/* Decorative Elements - Top Right */}
-        <div className="absolute top-6 right-6 text-2xl opacity-60" style={{ color: scheme.accent }}>
-          ✦
-        </div>
-        <div className="absolute top-14 right-12 text-sm opacity-40" style={{ color: scheme.accent }}>
-          ✦
+        {/* Top bar - Nigerian flag stripe */}
+        <div className="absolute top-0 left-0 right-0 h-2 flex">
+          <div className="w-1/3 bg-[#008751]"></div>
+          <div className="w-1/3 bg-white"></div>
+          <div className="w-1/3 bg-[#008751]"></div>
         </div>
 
-        {/* Decorative Elements - Bottom */}
-        <div className="absolute bottom-20 left-8 text-lg opacity-30" style={{ color: scheme.accent }}>
-          ✦
-        </div>
-        <div className="absolute bottom-12 right-10 text-xl opacity-40" style={{ color: scheme.accent }}>
-          ✦
-        </div>
-
-        {/* Main Content - Centered */}
-        <div className="h-full flex flex-col justify-center items-center text-center px-4">
-          {/* Opening Quote Mark */}
-          <div
-            className="text-6xl md:text-7xl font-serif leading-none mb-2 opacity-40"
-            style={{ color: scheme.accent }}
-          >
-            &ldquo;
-          </div>
-
-          {/* The Law Summary - BOLD and LARGE */}
-          <p
-            className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-6"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              letterSpacing: '-0.01em',
-            }}
-          >
-            {law.summary}
-          </p>
-
-          {/* Closing Quote Mark */}
-          <div
-            className="text-6xl md:text-7xl font-serif leading-none mb-4 opacity-40"
-            style={{ color: scheme.accent }}
-          >
-            &rdquo;
-          </div>
-
-          {/* Decorative Line */}
-          <div
-            className="w-20 h-1 rounded-full mb-4"
-            style={{ backgroundColor: scheme.accent }}
-          />
-
-          {/* Section Reference */}
-          <p
-            className="text-base md:text-lg font-medium opacity-90 tracking-wide"
-            style={{ fontFamily: "var(--font-inter), sans-serif" }}
-          >
-            {law.section || 'Nigerian Constitution'}
-          </p>
-
-          {/* Branding */}
-          <div className="absolute bottom-6 left-0 right-0 flex justify-center">
-            <p
-              className="text-xs md:text-sm font-medium tracking-widest uppercase opacity-60"
-              style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >
-              SimplyLegal 🇳🇬
+        {/* Content */}
+        <div className="h-full flex flex-col justify-between pt-4">
+          {/* Quote */}
+          <div className="flex-1 flex flex-col justify-center">
+            <p className="text-2xl md:text-3xl font-bold leading-tight mb-6">
+              &ldquo;{law.summary}&rdquo;
             </p>
+          </div>
+
+          {/* Bottom section */}
+          <div>
+            {/* Divider line */}
+            <div className="w-16 h-1 mb-4" style={{ backgroundColor: style.accent }}></div>
+
+            {/* Section reference */}
+            <p className={`text-lg font-semibold mb-1 ${style.accentText}`}>
+              {law.section || 'Nigerian Constitution'}
+            </p>
+
+            {/* Branding */}
+            <div className="flex items-center justify-between mt-4">
+              <span className="text-xs uppercase tracking-[0.2em] opacity-60">
+                SimplyLegal
+              </span>
+              <span className="text-lg">🇳🇬</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Action Buttons - Below the card */}
-      <div className="flex items-center justify-center gap-4 mt-6 max-w-[600px] mx-auto">
+      {/* Action Buttons */}
+      <div className="flex items-center justify-center gap-3 mt-6 max-w-[500px] mx-auto">
         <button
           onClick={handleDownload}
-          className="inline-flex items-center px-6 py-3 bg-[#2D2A26] text-white rounded-full hover:bg-[#1B4332] transition-all text-sm font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-          style={{ fontFamily: "var(--font-inter), sans-serif" }}
+          className="flex-1 inline-flex items-center justify-center px-5 py-3 bg-[#1A1A1A] text-white font-semibold text-sm uppercase tracking-wide hover:bg-[#008751] transition-colors"
         >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Download Image
+          Download
         </button>
 
         <button
           onClick={handleShare}
-          className="inline-flex items-center px-6 py-3 bg-[#C4A35A] text-[#2D2A26] rounded-full hover:bg-[#d4b36a] transition-all text-sm font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-          style={{ fontFamily: "var(--font-inter), sans-serif" }}
+          className="flex-1 inline-flex items-center justify-center px-5 py-3 border-2 border-[#1A1A1A] text-[#1A1A1A] font-semibold text-sm uppercase tracking-wide hover:bg-[#1A1A1A] hover:text-white transition-colors"
         >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
           </svg>
           Share
         </button>
       </div>
 
-      {/* Read More Button */}
-      <div className="text-center mt-5 max-w-[600px] mx-auto">
+      {/* Read More Toggle */}
+      <div className="text-center mt-4 max-w-[500px] mx-auto">
         <button
           onClick={() => setShowReadMore(!showReadMore)}
-          className="text-[#1B4332] hover:text-[#2D5A3D] font-semibold text-sm inline-flex items-center transition-colors"
-          style={{ fontFamily: "var(--font-inter), sans-serif" }}
+          className="text-[#008751] hover:text-[#006B3F] font-semibold text-sm inline-flex items-center transition-colors uppercase tracking-wide"
         >
-          {showReadMore ? 'Show Less' : 'Read the Original Constitution Text'}
+          {showReadMore ? 'Hide Details' : 'Read Original Text'}
           <svg
             className={`w-4 h-4 ml-2 transition-transform ${showReadMore ? 'rotate-180' : ''}`}
             fill="none"
@@ -206,14 +157,11 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
         </button>
       </div>
 
-      {/* Expanded Constitutional Text */}
+      {/* Expanded Content */}
       {showReadMore && (
-        <div
-          className="mt-5 bg-white rounded-2xl p-6 md:p-8 border border-[#E8DFD5] shadow-lg max-w-[600px] mx-auto"
-          style={{ fontFamily: "var(--font-inter), sans-serif" }}
-        >
+        <div className="mt-4 bg-[#F5F1E8] p-6 md:p-8 max-w-[500px] mx-auto">
           <h4
-            className="text-xl font-bold text-[#2D2A26] mb-4"
+            className="text-xl font-bold text-[#1A1A1A] mb-4 uppercase tracking-wide"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             {law.title}
@@ -221,14 +169,14 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
 
           {/* Key Points */}
           {law.keyPoints && law.keyPoints.length > 0 && (
-            <div className="mb-5">
-              <p className="text-xs text-[#C4A35A] uppercase tracking-widest font-semibold mb-3">
+            <div className="mb-6">
+              <p className="text-xs text-[#008751] uppercase tracking-widest font-bold mb-3">
                 Key Points
               </p>
               <ul className="space-y-2">
                 {law.keyPoints.map((point, idx) => (
-                  <li key={idx} className="text-sm text-[#2D2A26] flex items-start">
-                    <span className="text-[#C4A35A] mr-3 text-lg">✦</span>
+                  <li key={idx} className="text-sm text-[#1A1A1A] flex items-start">
+                    <span className="text-[#D4A843] mr-2 font-bold">→</span>
                     {point}
                   </li>
                 ))}
@@ -236,19 +184,19 @@ export default function LawQuoteCard({ law, colorScheme = 'green' }: LawQuoteCar
             </div>
           )}
 
-          {/* Original Constitutional Text */}
+          {/* Original Text */}
           {law.originalText && (
-            <div className="border-t border-[#E8DFD5] pt-5 mt-5">
-              <p className="text-xs text-[#C4A35A] uppercase tracking-widest font-semibold mb-3">
+            <div className="border-t border-[#E0E0E0] pt-6">
+              <p className="text-xs text-[#008751] uppercase tracking-widest font-bold mb-3">
                 Original Constitutional Text
               </p>
               <p
-                className="text-sm text-[#4a4743] leading-relaxed italic"
+                className="text-sm text-[#6B6B6B] leading-relaxed italic"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 &ldquo;{law.originalText}&rdquo;
               </p>
-              <p className="text-xs text-[#888] mt-3 font-medium">
+              <p className="text-xs text-[#6B6B6B] mt-3 font-medium">
                 — {law.source}
               </p>
             </div>
