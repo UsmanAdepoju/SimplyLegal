@@ -86,7 +86,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <span className="text-6xl mb-6 block">{category.icon}</span>
             <h1
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               {category.name}
             </h1>
@@ -134,7 +134,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   <div className="flex items-center mb-8">
                     <span
                       className="text-4xl font-bold text-[#C4A35A] w-14"
-                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                      style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                     >
                       {letter}
                     </span>
@@ -159,7 +159,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               <div className="text-6xl mb-4">📜</div>
               <p
                 className="text-[#2D2A26] text-xl font-bold mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 Coming Soon
               </p>
@@ -180,7 +180,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </p>
             <h2
               className="text-2xl md:text-3xl font-bold text-[#2D2A26]"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Other Categories
             </h2>
@@ -201,7 +201,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     <span className="text-3xl block mb-2">{cat.icon}</span>
                     <p
                       className="font-semibold text-sm"
-                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                      style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                     >
                       {cat.name}
                     </p>

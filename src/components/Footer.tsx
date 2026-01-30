@@ -11,7 +11,7 @@ export default function Footer() {
               <span className="text-[#C4A35A] text-xl">✦</span>
               <span
                 className="text-xl font-bold text-white"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 SimplyLegal
               </span>
@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h3
               className="text-white font-bold mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Quick Links
             </h3>
@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <h3
               className="text-white font-bold mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Popular
             </h3>

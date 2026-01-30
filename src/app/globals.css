@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
-
 :root {
   /* Warm, human color palette */
   --background: #FDF8F3;
@@ -20,19 +17,17 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-display: 'Playfair Display', 'DM Serif Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 /* Display font for headings */
 h1, h2, h3, .font-display {
-  font-family: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
 /* Custom scrollbar */
@@ -72,19 +67,6 @@ html {
 
 .sparkle {
   animation: sparkle 2s ease-in-out infinite;
-}
-
-/* Quote card styles */
-.quote-card {
-  font-family: 'Playfair Display', Georgia, serif;
-}
-
-/* Bold display text */
-.display-text {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
 }
 
 /* Marquee animation for scrolling text */

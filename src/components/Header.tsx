@@ -14,7 +14,7 @@ export default function Header() {
             <span className="text-[#C4A35A] text-xl">✦</span>
             <span
               className="text-xl font-bold text-[#2D2A26]"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               SimplyLegal
             </span>

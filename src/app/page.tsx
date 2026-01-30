@@ -32,7 +32,7 @@ export default function Home() {
             {/* Main Headline */}
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2D2A26] mb-6 leading-tight"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Know Your Rights,
               <br />
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2
               className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Laws as Shareable Quotes
             </h2>
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <div
               className="bg-[#1B4332] aspect-square rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               {/* Decorative */}
               <div className="absolute top-6 left-6 text-2xl text-[#C4A35A] opacity-60">✦</div>
@@ -149,7 +149,7 @@ export default function Home() {
             </p>
             <h2
               className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Law Categories
             </h2>
@@ -180,7 +180,7 @@ export default function Home() {
                       <div>
                         <h3
                           className="font-bold text-[#2D2A26] text-lg group-hover:text-[#1B4332] transition-colors"
-                          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                          style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                         >
                           {category.name}
                         </h3>
@@ -219,7 +219,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Why SimplyLegal?
             </h2>
@@ -235,7 +235,7 @@ export default function Home() {
               </div>
               <h3
                 className="text-xl font-bold mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 Plain English
               </h3>
@@ -249,7 +249,7 @@ export default function Home() {
               </div>
               <h3
                 className="text-xl font-bold mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 Shareable Cards
               </h3>
@@ -263,7 +263,7 @@ export default function Home() {
               </div>
               <h3
                 className="text-xl font-bold mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 Original Text
               </h3>
@@ -283,7 +283,7 @@ export default function Home() {
           </p>
           <h2
             className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-6"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             Ready to Know Your Rights?
           </h2>
