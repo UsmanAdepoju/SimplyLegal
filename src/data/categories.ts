@@ -30,6 +30,41 @@ export const categories: Category[] = [
     icon: '📜',
     color: 'bg-cyan-600',
   },
+  {
+    id: 'electoral',
+    name: 'Elections & Voting',
+    description: 'How elections work, your right to vote, and INEC powers',
+    icon: '🗳️',
+    color: 'bg-violet-600',
+  },
+  {
+    id: 'legislature',
+    name: 'National Assembly',
+    description: 'The Senate and House of Representatives - how laws are made',
+    icon: '🏛️',
+    color: 'bg-slate-700',
+  },
+  {
+    id: 'executive',
+    name: 'The President & Governors',
+    description: 'Executive powers, how the President and Governors work',
+    icon: '🎖️',
+    color: 'bg-amber-700',
+  },
+  {
+    id: 'judiciary',
+    name: 'Courts & Justice',
+    description: 'How the court system works in Nigeria',
+    icon: '⚖️',
+    color: 'bg-rose-700',
+  },
+  {
+    id: 'police-military',
+    name: 'Police & Armed Forces',
+    description: 'Powers and limitations of police, army, and other security agencies',
+    icon: '🛡️',
+    color: 'bg-zinc-700',
+  },
   // Practical Law Categories
   {
     id: 'traffic',

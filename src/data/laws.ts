@@ -1069,6 +1069,1078 @@ The Government of a State shall ensure that every person who is entitled to vote
 The functions to be conferred by Law upon local government council shall include those set out in the Fourth Schedule to this Constitution.`,
   },
 
+  // =====================================================
+  // CONSTITUTIONAL LAW - ELECTIONS & VOTING (Part I of Third Schedule)
+  // =====================================================
+
+  {
+    id: 'electoral-001',
+    title: 'Your Right to Vote',
+    summary: 'Every Nigerian citizen aged 18 and above has the right to vote in elections.',
+    content: `Voting is one of your most important rights as a Nigerian. Here's what you need to know:
+
+**Who Can Vote:**
+- You must be a Nigerian citizen
+- You must be 18 years or older
+- You must be registered with INEC (Independent National Electoral Commission)
+- You must not be declared mentally incapacitated by a court
+
+**How to Register:**
+- Go to INEC's Continuous Voter Registration (CVR)
+- Provide your details and biometric data
+- Collect your Permanent Voter's Card (PVC)
+- Without your PVC, you CANNOT vote
+
+**Your Vote Matters:**
+- You choose the President, Governors, Senators, House of Representatives members, and State House of Assembly members
+- Your vote is SECRET - no one can know who you voted for
+- Voting is your way of holding government accountable`,
+    category: 'electoral',
+    source: 'Constitution of Nigeria 1999, Section 77; Electoral Act 2022',
+    section: 'Section 77',
+    keyPoints: [
+      'Must be 18 years or older to vote',
+      'Must be a Nigerian citizen',
+      'Must register with INEC and get PVC',
+      'Your vote is secret',
+    ],
+    originalText: `Every citizen of Nigeria, who has attained the age of eighteen years residing in Nigeria at the time of the registration of voters for purposes of election to a legislative house, shall be entitled to be registered as a voter for that election.`,
+  },
+  {
+    id: 'electoral-002',
+    title: 'INEC - The Election Body',
+    summary: 'The Independent National Electoral Commission (INEC) conducts all elections in Nigeria.',
+    content: `INEC is the body responsible for conducting elections in Nigeria. Here's what they do:
+
+**INEC's Powers:**
+- Organize and supervise all elections (Presidential, Governorship, National Assembly, State Assembly)
+- Register voters and maintain the voters' register
+- Register political parties and monitor them
+- Divide the country into constituencies
+- Educate Nigerians about elections
+
+**INEC Must Be Independent:**
+- The Chairman and Commissioners are appointed by the President (with Senate approval)
+- Once appointed, they cannot be easily removed
+- They should not favor any political party
+- Their funding comes directly from the Consolidated Revenue Fund
+
+**Political Parties:**
+- All political parties must register with INEC
+- INEC monitors their activities and finances
+- INEC can deregister parties that don't meet requirements
+- Parties must follow the constitution and electoral laws`,
+    category: 'electoral',
+    source: 'Constitution of Nigeria 1999, Third Schedule, Part I, Section F',
+    section: 'Third Schedule, Part I',
+    keyPoints: [
+      'INEC conducts all elections in Nigeria',
+      'INEC registers voters and political parties',
+      'INEC must be independent',
+      'INEC divides the country into constituencies',
+    ],
+    originalText: `The Commission shall have power to: organise, undertake and supervise all elections to the offices of the President and Vice-President, the Governor and Deputy Governor of a State, and to the membership of the Senate, the House of Representatives and the House of Assembly of each State of the Federation; register political parties in accordance with the provisions of this Constitution and an Act of the National Assembly; monitor the organisation and operation of the political parties, including their finances.`,
+  },
+  {
+    id: 'electoral-003',
+    title: 'Election Offences and Penalties',
+    summary: 'Electoral malpractice carries heavy penalties including imprisonment.',
+    content: `Elections must be free and fair. Here are things you must NOT do:
+
+**Vote Buying and Selling:**
+- Don't accept money or gifts for your vote
+- Don't offer money or gifts to influence voters
+- Penalty: Up to 12 months imprisonment or fine
+
+**Multiple Voting:**
+- You can only vote ONCE in any election
+- Using fake voter cards is a crime
+- Penalty: Up to 2 years imprisonment
+
+**Violence and Intimidation:**
+- Don't threaten or harm voters
+- Don't disrupt voting with violence
+- Penalty: Up to 3 years imprisonment
+
+**Ballot Snatching:**
+- Don't steal or destroy ballot boxes
+- Don't interfere with election materials
+- Penalty: Up to 2 years imprisonment
+
+**False Results:**
+- Election officials who falsify results face prison
+- Penalty: Up to 3 years imprisonment
+
+**Report Electoral Offences:** If you witness any of these, report to INEC, police, or election observers.`,
+    category: 'electoral',
+    source: 'Electoral Act 2022, Sections 114-129',
+    penalty: 'Various penalties from fines to imprisonment depending on offence',
+    keyPoints: [
+      'Vote buying carries up to 12 months imprisonment',
+      'Multiple voting is a criminal offence',
+      'Ballot snatching carries up to 2 years',
+      'Election violence carries severe penalties',
+    ],
+  },
+  {
+    id: 'electoral-004',
+    title: 'Who Can Run for Office',
+    summary: 'Different positions have different requirements for age, education, and citizenship.',
+    content: `Want to run for public office? Here are the requirements:
+
+**President of Nigeria:**
+- Nigerian citizen by birth
+- At least 40 years old
+- Member of a political party
+- Educated at least to School Certificate level (or equivalent)
+- Not convicted of any offence involving dishonesty
+
+**Governor of a State:**
+- Nigerian citizen by birth
+- At least 35 years old
+- Member of a political party
+- Educated at least to School Certificate level
+
+**Senator:**
+- Nigerian citizen (by birth or naturalization)
+- At least 35 years old
+- Member of a political party
+- Educated at least to School Certificate level
+
+**House of Representatives Member:**
+- Nigerian citizen
+- At least 30 years old
+- Member of a political party
+- Educated at least to School Certificate level
+
+**State House of Assembly Member:**
+- Nigerian citizen
+- At least 30 years old
+- Member of a political party
+- Educated at least to School Certificate level`,
+    category: 'electoral',
+    source: 'Constitution of Nigeria 1999, Sections 65, 106, 131, 177',
+    keyPoints: [
+      'President must be 40+, citizen by birth',
+      'Governor must be 35+, citizen by birth',
+      'Senators must be 35+',
+      'House of Reps members must be 30+',
+    ],
+    originalText: `A person shall be qualified for election to the Senate if - he is a citizen of Nigeria by birth; he has attained the age of thirty-five years; he has been educated up to at least School Certificate level or its equivalent; and he is a member of a political party and is sponsored by that party.`,
+  },
+  {
+    id: 'electoral-005',
+    title: 'Election Petition and Disputes',
+    summary: 'If you believe an election was not fair, you can challenge it at the Election Tribunal.',
+    content: `If you believe an election was rigged or conducted wrongly, here's what you can do:
+
+**Who Can Challenge an Election:**
+- A candidate who contested the election
+- A political party that fielded a candidate
+
+**Where to Challenge:**
+- National Assembly elections: Election Petition Tribunal
+- Governorship elections: Election Petition Tribunal
+- Presidential election: Court of Appeal (as Tribunal of first instance)
+
+**Time Limit:**
+- You must file your petition within 21 days of the election results being declared
+- Don't delay - if you miss this deadline, you lose your chance
+
+**What You Must Prove:**
+- The winner was not qualified to contest
+- The election was not conducted according to law
+- The winner was not validly elected (through rigging, etc.)
+- The winner's votes should be voided due to corruption
+
+**Appeals:**
+- From Election Tribunal, you can appeal to the Court of Appeal
+- From Court of Appeal, you can appeal to the Supreme Court (for Presidential and Governorship)
+- The Supreme Court's decision is FINAL`,
+    category: 'electoral',
+    source: 'Constitution of Nigeria 1999, Section 285; Electoral Act 2022',
+    section: 'Section 285',
+    keyPoints: [
+      'Must file petition within 21 days',
+      'Only candidates and parties can challenge',
+      'Supreme Court is the final arbiter',
+      'Must prove election was flawed',
+    ],
+    originalText: `An election petition shall be filed within twenty-one days after the date of declaration of result of the election. An election tribunal shall deliver its judgment in writing within one hundred and eighty days from the date of the filing of the petition.`,
+  },
+
+  // =====================================================
+  // CONSTITUTIONAL LAW - THE LEGISLATURE (Part II)
+  // =====================================================
+
+  {
+    id: 'legislature-001',
+    title: 'The National Assembly',
+    summary: 'Nigeria has two legislative houses: the Senate (109 members) and the House of Representatives (360 members).',
+    content: `The National Assembly is where Nigeria's laws are made. It consists of two chambers:
+
+**The Senate:**
+- 109 Senators total
+- 3 Senators from each of the 36 states
+- 1 Senator from the Federal Capital Territory (Abuja)
+- The Senate President leads the Senate
+- Senators serve 4-year terms
+
+**The House of Representatives:**
+- 360 members
+- Number from each state depends on population
+- The Speaker leads the House
+- Members serve 4-year terms
+
+**What They Do:**
+- Make laws for Nigeria
+- Approve the national budget
+- Approve appointments (Ministers, Ambassadors, etc.)
+- Investigate government agencies
+- Can impeach the President or Vice President
+
+**How Laws Are Made:**
+- A bill can start in either the Senate or House
+- It must pass both chambers
+- Then it goes to the President for signature
+- If the President refuses (vetoes), it can still become law if 2/3 of both chambers vote for it`,
+    category: 'legislature',
+    source: 'Constitution of Nigeria 1999, Part II, Sections 47-64',
+    section: 'Sections 47-64',
+    keyPoints: [
+      'Senate has 109 members (3 per state + 1 FCT)',
+      'House of Reps has 360 members',
+      'They make laws and approve budgets',
+      'Legislators serve 4-year terms',
+    ],
+    originalText: `There shall be a National Assembly for the Federation which shall consist of a Senate and a House of Representatives. The Senate shall consist of three Senators from each State and one from the Federal Capital Territory, Abuja. The House of Representatives shall consist of three hundred and sixty members representing constituencies of nearly equal population as far as possible.`,
+  },
+  {
+    id: 'legislature-002',
+    title: 'Powers of the National Assembly',
+    summary: 'The National Assembly has the power to make laws on matters in the Exclusive and Concurrent Legislative Lists.',
+    content: `The National Assembly has power to make laws on many important matters:
+
+**Exclusive List (Only National Assembly can legislate):**
+- Defence and national security
+- Currency, banking, and finance
+- Immigration and citizenship
+- Foreign affairs
+- Aviation and railways
+- Mines and minerals (including oil and gas)
+- Police and other security agencies
+- Customs and excise
+- Patents and trademarks
+
+**Concurrent List (Both National Assembly and State Assemblies):**
+- Education
+- Health
+- Agriculture
+- Housing
+- Electricity
+
+**Special Powers:**
+- Approve national budget
+- Approve borrowing by government
+- Confirm ministerial appointments
+- Investigate any matter
+- Summon anyone to testify
+- Declare state of emergency (with President)
+
+**Limitations:**
+- Cannot make laws that violate fundamental rights
+- Cannot make retroactive criminal laws
+- Some laws require 2/3 majority`,
+    category: 'legislature',
+    source: 'Constitution of Nigeria 1999, Part II, Second Schedule',
+    section: 'Second Schedule',
+    keyPoints: [
+      'Exclusive List: Only National Assembly can legislate',
+      'Concurrent List: Shared with State Assemblies',
+      'Can approve budgets and confirm appointments',
+      'Can investigate any matter',
+    ],
+    originalText: `The National Assembly shall have power to make laws for the peace, order and good government of the Federation or any part thereof with respect to any matter included in the Exclusive Legislative List set out in Part I of the Second Schedule to this Constitution.`,
+  },
+  {
+    id: 'legislature-003',
+    title: 'State House of Assembly',
+    summary: 'Each state has a House of Assembly that makes laws for that state.',
+    content: `Each of Nigeria's 36 states has its own legislature called the House of Assembly:
+
+**Composition:**
+- Each state has between 24 and 40 members
+- Number depends on the state's population
+- Led by a Speaker
+- Members serve 4-year terms
+
+**What They Do:**
+- Make laws for the state
+- Approve the state budget
+- Confirm appointments (Commissioners, etc.)
+- Can investigate state matters
+- Can impeach the Governor or Deputy Governor
+
+**Their Powers:**
+- Make laws on matters in the Concurrent List
+- Make laws on any matter not in the Exclusive List
+- Approve creation of new local governments
+- Regulate local government finances
+
+**How State Laws Work:**
+- If a state law conflicts with a federal law on the Concurrent List, the federal law prevails
+- States cannot make laws on Exclusive List matters
+- State laws only apply within that state`,
+    category: 'legislature',
+    source: 'Constitution of Nigeria 1999, Part II, Sections 90-105',
+    section: 'Sections 90-105',
+    keyPoints: [
+      'Each state has 24-40 members',
+      'Makes laws for the state only',
+      'Federal law overrides conflicting state law',
+      'Can impeach the Governor',
+    ],
+    originalText: `There shall be a House of Assembly for each of the States of the Federation. A House of Assembly shall have power to make laws for the peace, order and good government of the State or any part thereof with respect to the matters not included in the Exclusive Legislative List set out in Part I of the Second Schedule to this Constitution.`,
+  },
+  {
+    id: 'legislature-004',
+    title: 'How Bills Become Law',
+    summary: 'A bill must pass through several stages in both chambers before it becomes law.',
+    content: `Here's how laws are made in Nigeria:
+
+**Step 1: Introduction**
+- Any member of the National Assembly can introduce a bill
+- Money bills (about taxes, spending) can only start in the House of Reps
+- The bill is read for the first time (First Reading)
+
+**Step 2: Second Reading**
+- The bill is debated generally
+- Members discuss the principles of the bill
+- They vote on whether to proceed
+
+**Step 3: Committee Stage**
+- The bill goes to a committee for detailed examination
+- The committee may hold public hearings
+- They can amend the bill
+- They report back to the chamber
+
+**Step 4: Third Reading**
+- Final debate and vote
+- If passed, it goes to the other chamber
+
+**Step 5: Other Chamber**
+- The whole process repeats
+- If changes are made, both chambers must agree
+
+**Step 6: Presidential Assent**
+- The President must sign within 30 days
+- If the President refuses, the bill returns to National Assembly
+- 2/3 majority in both chambers can override the President's veto`,
+    category: 'legislature',
+    source: 'Constitution of Nigeria 1999, Sections 58-59',
+    section: 'Sections 58-59',
+    keyPoints: [
+      'Bills pass through three readings',
+      'Must pass both Senate and House',
+      'President must sign within 30 days',
+      '2/3 majority can override presidential veto',
+    ],
+    originalText: `The power of the National Assembly to make laws shall be exercised by bills passed by both the Senate and the House of Representatives and, except as otherwise provided by subsection (5) of this section, assented to by the President.`,
+  },
+  {
+    id: 'legislature-005',
+    title: 'Legislative Immunity',
+    summary: 'Members of the National Assembly have certain protections while performing their duties.',
+    content: `Legislators have special protections to allow them to do their work without fear:
+
+**What They're Protected From:**
+- They cannot be sued for anything said in the National Assembly
+- They cannot be arrested for civil matters while in session
+- They can speak freely in debates without legal consequences
+
+**Why This Matters:**
+- Allows free debate on important issues
+- Protects them from government intimidation
+- Ensures they can represent their constituents fearlessly
+
+**What They're NOT Protected From:**
+- Criminal actions outside their legislative duties
+- Actions outside the chambers
+- Treason or other serious crimes
+- They can be investigated for corruption
+
+**Important:**
+This immunity is for their LEGISLATIVE work, not personal actions. A legislator who commits a crime can still be prosecuted.`,
+    category: 'legislature',
+    source: 'Constitution of Nigeria 1999, Sections 30-31',
+    section: 'Sections 30-31',
+    keyPoints: [
+      'Cannot be sued for speeches in the Assembly',
+      'Cannot be arrested for civil matters during session',
+      'Does not protect them from criminal prosecution',
+      'Only covers legislative activities',
+    ],
+    originalText: `A member of a legislative house shall be entitled to freedom of speech and debates or proceedings in the legislative house. No civil or criminal proceedings shall be instituted against any member of a legislative house for words spoken before, or written in a report to, the legislative house or a committee thereof or by reason of any matter or thing brought by him therein by petition, bill, motion or otherwise.`,
+  },
+
+  // =====================================================
+  // CONSTITUTIONAL LAW - THE EXECUTIVE (Part II)
+  // =====================================================
+
+  {
+    id: 'executive-001',
+    title: 'The President of Nigeria',
+    summary: 'The President is the Head of State, Head of Government, and Commander-in-Chief of the Armed Forces.',
+    content: `The President is the most powerful position in Nigeria. Here's what you need to know:
+
+**Who Is the President:**
+- Head of State - represents Nigeria
+- Head of Government - leads the executive branch
+- Commander-in-Chief of the Armed Forces
+
+**Requirements to Be President:**
+- Nigerian citizen by birth
+- At least 40 years old
+- Member of a political party
+- At least School Certificate education
+- Not convicted of dishonesty
+
+**How the President Is Elected:**
+- Direct election by Nigerian voters
+- Must win majority of votes nationwide
+- Must get at least 25% of votes in 2/3 of all states (24 states)
+- Serves 4-year term, maximum of 2 terms (8 years total)
+
+**The President's Powers:**
+- Appoint Ministers, Ambassadors, Judges
+- Grant pardons
+- Declare state of emergency
+- Sign bills into law
+- Make treaties with other countries
+- Command the armed forces`,
+    category: 'executive',
+    source: 'Constitution of Nigeria 1999, Part II, Sections 130-140',
+    section: 'Sections 130-140',
+    keyPoints: [
+      'Head of State, Government, and Armed Forces',
+      'Must be Nigerian citizen by birth, 40+ years',
+      'Serves maximum 2 terms of 4 years each',
+      'Must win in at least 24 states',
+    ],
+    originalText: `There shall be for the Federation a President. The President shall be the Head of State, the Chief Executive of the Federation and Commander-in-Chief of the Armed Forces of the Federation. The President shall hold office for a term of four years and shall not hold office for more than two terms.`,
+  },
+  {
+    id: 'executive-002',
+    title: 'The Vice President',
+    summary: 'The Vice President supports the President and takes over if the President cannot serve.',
+    content: `The Vice President is second-in-command to the President:
+
+**Who Is the Vice President:**
+- Runs on the same ticket as the President
+- Elected together with the President
+- Must be from a different region/religion (by convention, not law)
+
+**What the Vice President Does:**
+- Assists the President
+- Presides over the National Economic Council
+- Acts as President when the President is away
+- Becomes President if the President dies, resigns, or is removed
+
+**Acting President:**
+If the President is temporarily incapacitated or away:
+- The Vice President acts as President
+- The Vice President exercises all presidential powers
+- This requires a written declaration from the President
+- If President cannot make declaration, the Cabinet and National Assembly must certify
+
+**Requirements:**
+Same requirements as President:
+- Nigerian citizen by birth
+- At least 40 years old
+- Member of same political party as President`,
+    category: 'executive',
+    source: 'Constitution of Nigeria 1999, Sections 141-146',
+    section: 'Sections 141-146',
+    keyPoints: [
+      'Runs on same ticket as President',
+      'Acts as President when President is away',
+      'Becomes President if President cannot serve',
+      'Same qualifications as President',
+    ],
+    originalText: `There shall be for the Federation a Vice-President who shall be elected in accordance with the provisions of section 134 of this Constitution. Whenever the President is away, or is temporarily incapable of discharging the functions of his office, or is otherwise unable to discharge the functions of his office, the Vice-President shall discharge those functions.`,
+  },
+  {
+    id: 'executive-003',
+    title: 'Governors and State Executive',
+    summary: 'Each state has a Governor who is the Chief Executive of that state.',
+    content: `Each of Nigeria's 36 states has its own executive led by a Governor:
+
+**The Governor:**
+- Chief Executive of the state
+- Elected directly by voters in the state
+- Must get majority plus 25% in 2/3 of local governments
+- Serves 4-year term, maximum 2 terms
+- Must be Nigerian citizen by birth, at least 35 years old
+
+**Governor's Powers:**
+- Appoint Commissioners (like Ministers at state level)
+- Appoint judges of state courts
+- Grant pardons for state offences
+- Assent to bills from State House of Assembly
+- Coordinate state government activities
+
+**The Deputy Governor:**
+- Elected with the Governor
+- Acts when Governor is away
+- Becomes Governor if Governor cannot serve
+- Assists in governing the state
+
+**State Executive Council:**
+- Governor + Deputy Governor + Commissioners
+- They run the state government together
+- Each Commissioner heads a ministry`,
+    category: 'executive',
+    source: 'Constitution of Nigeria 1999, Sections 176-196',
+    section: 'Sections 176-196',
+    keyPoints: [
+      'Governor is Chief Executive of the state',
+      'Must be 35+ years, citizen by birth',
+      'Maximum 2 terms of 4 years each',
+      'Appoints Commissioners and state officials',
+    ],
+    originalText: `There shall be for each State of the Federation a Governor who shall be the Chief Executive of that State. The Governor of a State shall hold office for a term of four years and shall not hold office for more than two terms.`,
+  },
+  {
+    id: 'executive-004',
+    title: 'Ministers and the Federal Cabinet',
+    summary: 'The President appoints Ministers who head ministries and form the Federal Executive Council.',
+    content: `The President does not run the government alone. Here's how the cabinet works:
+
+**Federal Executive Council (Cabinet):**
+- The President chairs it
+- Vice President is a member
+- All Ministers are members
+- They advise the President
+- They coordinate government policy
+
+**Ministers:**
+- Appointed by the President
+- Must be confirmed by the Senate
+- At least one Minister from each state
+- Each Minister heads a ministry
+
+**How Ministers Are Appointed:**
+1. President nominates a person
+2. Senate screens the nominee
+3. If approved, the person becomes Minister
+4. President assigns them a ministry
+
+**What Ministers Do:**
+- Run their ministries
+- Advise the President on their area
+- Implement government policy
+- Account to the National Assembly
+- Can be summoned by National Assembly
+
+**Removal of Ministers:**
+- The President can remove any Minister at any time
+- No reason needs to be given
+- Ministers serve at the President's pleasure`,
+    category: 'executive',
+    source: 'Constitution of Nigeria 1999, Sections 147-151',
+    section: 'Sections 147-151',
+    keyPoints: [
+      'At least one Minister from each state',
+      'Must be confirmed by Senate',
+      'President can remove Ministers anytime',
+      'Ministers run government ministries',
+    ],
+    originalText: `There shall be such offices of Ministers of the Government of the Federation as may be established by the President. Any appointment to the office of Minister of the Government of the Federation shall, if the nomination of any person to such office is confirmed by the Senate, be made by the President. Any Minister appointed shall not begin to perform the functions of the office until he has declared his assets and liabilities.`,
+  },
+  {
+    id: 'executive-005',
+    title: 'Impeachment of President or Governor',
+    summary: 'The President or Governor can be removed from office through an impeachment process.',
+    content: `If the President or Governor commits serious misconduct, they can be removed:
+
+**Grounds for Impeachment:**
+- Gross misconduct (serious misbehavior)
+- This includes: violation of the Constitution, corruption, abuse of office, or any serious wrongdoing
+
+**The Process for President:**
+1. Notice signed by at least 1/3 of Senators or House members
+2. Notice given to Senate President or Speaker
+3. Investigation by a panel of 7 persons
+4. If panel confirms the allegations
+5. 2/3 of Senate AND 2/3 of House must vote for removal
+6. President is then removed from office
+
+**The Process for Governor:**
+1. Notice signed by at least 1/3 of State House of Assembly members
+2. Investigation by a panel of 7 persons
+3. If panel confirms the allegations
+4. 2/3 of State House of Assembly must vote for removal
+5. Governor is then removed from office
+
+**Protections:**
+- The President/Governor has the right to defend themselves
+- The panel must be fair and impartial
+- Political witch-hunts are not allowed`,
+    category: 'executive',
+    source: 'Constitution of Nigeria 1999, Sections 143, 188',
+    section: 'Sections 143, 188',
+    keyPoints: [
+      'Requires 2/3 majority to remove',
+      'Must be for gross misconduct',
+      'Panel of 7 investigates the charges',
+      'The accused has right to defend themselves',
+    ],
+    originalText: `The President or Vice-President may be removed from office in accordance with the provisions of this section. Whenever a notice of any allegation in writing signed by not less than one-third of the members of the National Assembly is presented to the President of the Senate stating that the holder of the office of President or Vice-President is guilty of gross misconduct in the performance of the functions of his office, detailed particulars of which shall be specified, the President of the Senate shall, within seven days of the receipt of the notice, cause a copy of the notice to be served on the holder of the office and on each member of the National Assembly.`,
+  },
+
+  // =====================================================
+  // CONSTITUTIONAL LAW - THE JUDICIARY (Part III)
+  // =====================================================
+
+  {
+    id: 'judiciary-001',
+    title: 'The Supreme Court of Nigeria',
+    summary: 'The Supreme Court is the highest court in Nigeria. Its decisions are final and binding on all other courts.',
+    content: `The Supreme Court is the final court of appeal in Nigeria:
+
+**What It Is:**
+- The highest court in the land
+- Its decisions are FINAL - no appeal beyond it
+- All other courts must follow its decisions
+
+**Composition:**
+- Chief Justice of Nigeria (CJN) - heads the court
+- Up to 21 Justices of the Supreme Court
+- Appointed by the President on recommendation of National Judicial Council
+- Must be confirmed by the Senate
+- Justices retire at age 70
+
+**What It Does:**
+- Final appeal court for all cases
+- Decides disputes between Federal and State governments
+- Decides disputes between states
+- Has original jurisdiction in some matters
+- Interprets the Constitution
+
+**Presidential and Governorship Elections:**
+The Supreme Court is the final arbiter for:
+- Presidential election petitions (appeals from Court of Appeal)
+- Governorship election petitions (appeals from Court of Appeal)
+
+**Important:** When the Supreme Court speaks, that's the end. There is no higher court.`,
+    category: 'judiciary',
+    source: 'Constitution of Nigeria 1999, Sections 230-236',
+    section: 'Sections 230-236',
+    keyPoints: [
+      'Highest court in Nigeria',
+      'Decisions are final and binding',
+      'Led by Chief Justice of Nigeria',
+      'Final arbiter of election petitions',
+    ],
+    originalText: `There shall be a Supreme Court of Nigeria. The Supreme Court of Nigeria shall be duly constituted if it consists of not less than five Justices of the Supreme Court. The Supreme Court shall have original jurisdiction to the exclusion of any other court in any dispute between the Federation and a State or between States. The decision of the Supreme Court shall be final and binding on all courts and authorities and persons in Nigeria.`,
+  },
+  {
+    id: 'judiciary-002',
+    title: 'The Court of Appeal',
+    summary: 'The Court of Appeal hears appeals from lower courts and is the first court for election petitions.',
+    content: `The Court of Appeal is the second highest court in Nigeria:
+
+**What It Is:**
+- Hears appeals from Federal High Court, State High Courts, and other courts
+- First court for Presidential election petitions
+- Appeals from it go to the Supreme Court
+
+**Composition:**
+- President of the Court of Appeal (leads the court)
+- At least 49 Justices of the Court of Appeal
+- Has divisions across Nigeria
+- Justices retire at age 70
+
+**What It Does:**
+- Hears appeals from lower courts
+- Serves as the tribunal of first instance for Presidential elections
+- Hears appeals from State Election Tribunals
+- Can affirm, reverse, or modify lower court decisions
+
+**For Election Petitions:**
+- Presidential election: Court of Appeal sits as the first tribunal
+- Governorship election: Hears appeals from Election Tribunals
+- Must deliver judgment within 60 days of appeal
+
+**How Appeals Work:**
+You can appeal to the Court of Appeal if you disagree with a lower court's decision. You must show the lower court made an error in law or procedure.`,
+    category: 'judiciary',
+    source: 'Constitution of Nigeria 1999, Sections 237-248',
+    section: 'Sections 237-248',
+    keyPoints: [
+      'Second highest court in Nigeria',
+      'Hears appeals from lower courts',
+      'First tribunal for Presidential election petitions',
+      'Has divisions across Nigeria',
+    ],
+    originalText: `There shall be a Court of Appeal. The Court of Appeal shall consist of a President of the Court of Appeal and such number of Justices of the Court of Appeal, not less than forty-nine, of which number not less than three shall be learned in Islamic personal law, and not less than three shall be learned in Customary law, as may be prescribed by an Act of the National Assembly.`,
+  },
+  {
+    id: 'judiciary-003',
+    title: 'The Federal High Court',
+    summary: 'The Federal High Court handles cases involving the federal government, revenue, and certain specialized matters.',
+    content: `The Federal High Court is a very important court with special jurisdiction:
+
+**What It Handles:**
+- Cases involving the Federal Government
+- Revenue matters (taxes, customs, excise)
+- Banking and financial matters
+- Companies and intellectual property
+- Aviation and admiralty (shipping) matters
+- Drug offences (NDLEA cases)
+- Terrorism cases
+- Connected matters under federal law
+
+**Composition:**
+- Chief Judge of the Federal High Court (leads it)
+- Judges appointed by President on NJC recommendation
+- Has divisions in each state and FCT
+- Judges retire at age 65
+
+**Why It Matters:**
+If you have a case against a federal agency or about a federal matter, this is usually your court. Examples:
+- Disputes with FIRS about taxes
+- Disputes with Customs
+- Trademark and patent disputes
+- Cases against federal agencies
+
+**Appeals:**
+Decisions of the Federal High Court can be appealed to the Court of Appeal.`,
+    category: 'judiciary',
+    source: 'Constitution of Nigeria 1999, Sections 249-254',
+    section: 'Sections 249-254',
+    keyPoints: [
+      'Handles federal government cases',
+      'Deals with revenue and tax matters',
+      'Has divisions in every state',
+      'Appeals go to Court of Appeal',
+    ],
+    originalText: `There shall be a Federal High Court. The Federal High Court shall have and exercise jurisdiction to the exclusion of any other court in civil causes and matters - relating to the revenue of the Government of the Federation; connected with or pertaining to the taxation of companies and other bodies established or carrying on business in Nigeria and all other persons subject to Federal taxation.`,
+  },
+  {
+    id: 'judiciary-004',
+    title: 'State High Courts',
+    summary: 'Each state has a High Court that handles most civil and criminal cases within that state.',
+    content: `Every state has its own High Court:
+
+**What It Is:**
+- The main court of general jurisdiction in each state
+- Handles most civil and criminal cases
+- Has unlimited jurisdiction in the state
+
+**Composition:**
+- Chief Judge of the State (heads the court)
+- High Court Judges
+- Appointed by Governor on NJC recommendation
+- Judges retire at age 65
+
+**What It Handles:**
+- Land disputes
+- Contract disputes
+- Criminal cases (murder, robbery, etc.)
+- Family matters (divorce, custody)
+- Enforcement of fundamental rights
+- Appeals from Magistrate Courts
+- Any matter not specifically assigned to other courts
+
+**Fundamental Rights:**
+This is the court you go to if your fundamental rights are violated. You can ask the High Court to:
+- Stop the violation
+- Award compensation
+- Issue orders to protect you
+
+**Appeals:**
+High Court decisions can be appealed to the Court of Appeal.`,
+    category: 'judiciary',
+    source: 'Constitution of Nigeria 1999, Sections 270-274',
+    section: 'Sections 270-274',
+    keyPoints: [
+      'Main court in each state',
+      'Handles civil and criminal cases',
+      'Enforces fundamental rights',
+      'Appeals go to Court of Appeal',
+    ],
+    originalText: `There shall be a High Court for each State of the Federation. The High Court of a State shall have jurisdiction to hear and determine any civil proceedings in which the existence or extent of a legal right, power, duty, liability, privilege, interest, obligation or claim is in issue.`,
+  },
+  {
+    id: 'judiciary-005',
+    title: 'Sharia and Customary Courts',
+    summary: 'Some states have Sharia Courts of Appeal and Customary Courts of Appeal for religious and traditional law matters.',
+    content: `Nigeria recognizes religious and customary law in certain matters:
+
+**Sharia Courts of Appeal (in states that have them):**
+- Handle appeals in Islamic personal law matters
+- Marriage, divorce, family matters for Muslims
+- Inheritance under Islamic law
+- Wills and trusts under Islamic law
+- Found mainly in Northern states
+
+**Customary Courts of Appeal (in states that have them):**
+- Handle appeals in customary law matters
+- Traditional marriage and divorce
+- Chieftaincy disputes
+- Customary land matters
+- Inheritance under customary law
+
+**Important Points:**
+- These courts only handle CIVIL matters (not criminal for death penalty)
+- Parties must consent to their jurisdiction
+- You cannot be forced to go to these courts if you don't want to
+- Their decisions can be appealed to the Court of Appeal
+
+**Your Rights:**
+You have the right to choose whether to have your case heard under:
+- Common law (regular courts)
+- Sharia law (if Muslim and case qualifies)
+- Customary law (if case qualifies)`,
+    category: 'judiciary',
+    source: 'Constitution of Nigeria 1999, Sections 260-269, 275-284',
+    section: 'Sections 260-284',
+    keyPoints: [
+      'Sharia courts handle Islamic personal law',
+      'Customary courts handle traditional law matters',
+      'Only civil matters, not criminal penalties',
+      'Consent required for jurisdiction',
+    ],
+    originalText: `There shall be for any State that requires it a Sharia Court of Appeal for that State. A Sharia Court of Appeal of a State shall have such appellate and supervisory jurisdiction in civil proceedings involving questions of Islamic personal law. There shall be for any State that requires it a Customary Court of Appeal for that State.`,
+  },
+
+  // =====================================================
+  // CONSTITUTIONAL LAW - POLICE & ARMED FORCES
+  // =====================================================
+
+  {
+    id: 'police-001',
+    title: 'The Nigeria Police Force',
+    summary: 'There is one police force for Nigeria whose job is to maintain law and order, protect life and property.',
+    content: `The Nigeria Police Force is the main law enforcement agency in Nigeria:
+
+**What They Do:**
+- Maintain law and order
+- Prevent and detect crime
+- Protect life and property
+- Arrest and prosecute offenders
+- Preserve public peace
+
+**Structure:**
+- Headed by the Inspector-General of Police (IGP)
+- Each state has a Commissioner of Police
+- Police Service Commission handles appointments and discipline
+- Police Council advises on policy
+
+**Your Rights When Dealing with Police:**
+- They must identify themselves
+- They need a warrant to search your home (with exceptions)
+- You have the right to silence
+- You can have a lawyer present
+- You must be told why you're being arrested
+- You cannot be detained beyond 24-48 hours without court order
+
+**Limitations:**
+- Police cannot torture you
+- Police cannot extort money from you
+- Police cannot detain you without reason
+- You can report police misconduct to their superiors or the Police Service Commission`,
+    category: 'police-military',
+    source: 'Constitution of Nigeria 1999, Section 214; Police Act 2020',
+    section: 'Section 214',
+    keyPoints: [
+      'One police force for all of Nigeria',
+      'Headed by Inspector-General of Police',
+      'Must protect life and property',
+      'You have rights when dealing with police',
+    ],
+    originalText: `There shall be a Police Force for Nigeria, which shall be known as the Nigeria Police Force, and subject to the provisions of this section no other police force shall be established for the Federation or any part thereof. The Nigeria Police Force shall be organised and administered in accordance with such provisions as may be prescribed by an Act of the National Assembly. The members of the Nigeria Police Force shall have such powers and duties as may be conferred upon them by law.`,
+  },
+  {
+    id: 'police-002',
+    title: 'Your Rights During Arrest',
+    summary: 'You have specific rights when the police arrest you, including the right to know why you are being arrested.',
+    content: `If the police arrest you, you have important rights:
+
+**Immediately Upon Arrest:**
+- You must be told WHY you are being arrested
+- This must be in a language you understand
+- The police must identify themselves
+
+**After Arrest:**
+- You have the right to remain silent
+- You have the right to a lawyer
+- You can call a family member
+- You cannot be tortured or treated inhumanely
+
+**Detention Time Limits:**
+- For offences where bail is possible: Maximum 24 hours before you must be charged to court
+- For capital offences (e.g., murder): Maximum 48 hours
+- After this time, if not charged, you MUST be released
+
+**What You Should Do:**
+- Stay calm and cooperate
+- Ask for the officer's name and rank
+- Don't resist arrest (even if wrongful)
+- Take note of witnesses
+- Report any abuse later
+
+**If Your Rights Are Violated:**
+- Report to the Officer in Charge of the station
+- Report to Police Service Commission
+- Report to National Human Rights Commission
+- You can sue in court for compensation`,
+    category: 'police-military',
+    source: 'Constitution of Nigeria 1999, Section 35; Administration of Criminal Justice Act 2015',
+    section: 'Section 35',
+    keyPoints: [
+      'Must be told reason for arrest',
+      'Right to remain silent',
+      'Right to a lawyer',
+      'Must be charged within 24-48 hours or released',
+    ],
+    originalText: `Any person who is arrested or detained shall be informed in writing within twenty-four hours (and in a language that he understands) of the facts and grounds for his arrest or detention. Any person who is arrested or detained shall be brought before a court of law within a reasonable time.`,
+  },
+  {
+    id: 'police-003',
+    title: 'The Armed Forces of Nigeria',
+    summary: 'The Armed Forces consist of the Army, Navy, and Air Force, commanded by the President.',
+    content: `Nigeria has three branches of armed forces:
+
+**The Three Branches:**
+1. Nigerian Army - land forces
+2. Nigerian Navy - sea forces
+3. Nigerian Air Force - air forces
+
+**Command Structure:**
+- The President is Commander-in-Chief
+- Chief of Defence Staff coordinates all three services
+- Each branch has its own Chief
+- Armed Forces Council advises on policy
+
+**What They Do:**
+- Defend Nigeria from external aggression
+- Maintain Nigeria's territorial integrity
+- Help maintain internal security when called upon
+- Participate in peacekeeping operations abroad
+
+**When Military Can Be Used Internally:**
+- Only when civilian authorities cannot maintain order
+- The President must approve
+- National Assembly should be informed
+- Must be temporary, not permanent
+- Human rights must still be respected
+
+**Military vs Police:**
+The military should not be used for normal law enforcement. That's the police's job. Military involvement in internal matters should be exceptional.`,
+    category: 'police-military',
+    source: 'Constitution of Nigeria 1999, Sections 217-220',
+    section: 'Sections 217-220',
+    keyPoints: [
+      'Army, Navy, and Air Force',
+      'President is Commander-in-Chief',
+      'Defends against external aggression',
+      'Internal use should be exceptional',
+    ],
+    originalText: `There shall be an armed forces for the Federation which shall consist of an army, a navy, and an air force. The Federation shall, subject to an Act of the National Assembly made in that behalf, equip and maintain the armed forces as may be considered adequate and effective for the purpose of - defending Nigeria from external aggression; maintaining its territorial integrity and securing its borders from violation on land, sea, or air; suppressing insurrection and acting in aid of civil authorities to restore order when called upon to do so by the President.`,
+  },
+  {
+    id: 'police-004',
+    title: 'State of Emergency',
+    summary: 'The President can declare a state of emergency in serious situations, but fundamental rights cannot be suspended arbitrarily.',
+    content: `In very serious situations, the President can declare a state of emergency:
+
+**When It Can Be Declared:**
+- Nigeria is at war
+- Nigeria is in danger of being invaded
+- There is breakdown of public order requiring extraordinary measures
+- There is a natural disaster affecting the community
+- Any other public danger threatening the whole country
+
+**The Process:**
+1. President issues proclamation of emergency
+2. Must be published in the Official Gazette
+3. Must be presented to National Assembly within 2 days
+4. National Assembly must approve by 2/3 majority
+5. Initially valid for 6 months
+6. Can be extended with National Assembly approval
+
+**What Can Happen:**
+- Government gains extra powers
+- Some rights may be restricted
+- Military may be deployed
+- Curfews may be imposed
+
+**What CANNOT Happen:**
+Even during emergency, these rights CANNOT be taken away:
+- Right to life (except in proper judicial proceedings)
+- Right not to be tortured
+- Right not to be enslaved
+- Right to fair hearing before punishment
+- Right not to be punished for acts that weren't crimes when committed`,
+    category: 'police-military',
+    source: 'Constitution of Nigeria 1999, Sections 305-306',
+    section: 'Sections 305-306',
+    keyPoints: [
+      'President can declare in serious situations',
+      'National Assembly must approve within days',
+      'Valid for 6 months initially',
+      'Some rights cannot be suspended even in emergency',
+    ],
+    originalText: `Subject to the provisions of this Constitution, the President may by instrument published in the Official Gazette of the Government of the Federation issue a Proclamation of a state of emergency in the Federation or any part thereof. The President shall immediately after the publication, transmit copies of the Official Gazette of the Government of the Federation containing the proclamation including the details of the emergency to the President of the Senate and the Speaker of the House of Representatives.`,
+  },
+  {
+    id: 'police-005',
+    title: 'Security Agencies Must Respect Human Rights',
+    summary: 'All security agencies must operate within the law and respect human rights.',
+    content: `Security agencies have power, but that power has limits:
+
+**All Security Personnel Must:**
+- Respect human rights
+- Follow the law
+- Not use excessive force
+- Not torture or degrade anyone
+- Not make arbitrary arrests
+- Be accountable for their actions
+
+**You Are Protected From:**
+- Torture and inhuman treatment
+- Arbitrary arrest and detention
+- Extrajudicial killings
+- Forced disappearances
+- Sexual abuse by security personnel
+
+**Accountability Mechanisms:**
+- Police Service Commission (for police misconduct)
+- Armed Forces Council (for military personnel)
+- National Human Rights Commission
+- Courts (you can sue for rights violations)
+- Public Complaints Commission
+
+**What To Do If Your Rights Are Violated:**
+1. Document everything (dates, names, witnesses)
+2. Seek medical attention if injured
+3. Report to the appropriate authority
+4. Consider filing a fundamental rights case in court
+5. Contact human rights organizations for help
+
+**Remember:** No order from a superior can justify human rights violations. "I was just following orders" is not a defense.`,
+    category: 'police-military',
+    source: 'Constitution of Nigeria 1999, Chapter IV; Anti-Torture Act 2017',
+    keyPoints: [
+      'Security agencies must respect human rights',
+      'Torture is illegal under all circumstances',
+      'You can sue for rights violations',
+      '"Following orders" is not a defense',
+    ],
+  },
+
   // Traffic & Road Safety
   {
     id: 'traffic-001',
