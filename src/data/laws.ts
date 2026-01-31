@@ -2649,6 +2649,145 @@ You can be held liable for content you post, share, or even "like" in some cases
       'Be careful what you share',
     ],
   },
+  {
+    id: 'digital-004',
+    title: 'Libel and Defamation Online',
+    summary: 'Publishing false statements that damage someone\'s reputation is illegal - whether spoken (slander) or written (libel).',
+    content: `Defamation is making false statements about someone that damage their reputation. In Nigerian law:
+
+**Types of Defamation:**
+- **Libel**: Written or published defamation (includes social media posts, blog posts, newspaper articles)
+- **Slander**: Spoken defamation
+
+**What Counts as Defamation:**
+- The statement must be FALSE
+- It must be about an identifiable person
+- It must be published/communicated to others
+- It must damage the person's reputation
+
+**Online Defamation:**
+- Social media posts (Twitter/X, Facebook, Instagram, TikTok)
+- WhatsApp broadcasts and group messages
+- Blog posts and online articles
+- Comments on websites
+- YouTube videos
+
+**Your Defenses:**
+- The statement is TRUE (truth is an absolute defense)
+- It was fair comment on a matter of public interest
+- It was privileged communication (like court proceedings)
+
+**What Can Happen:**
+- Civil lawsuit: You pay damages (compensation) to the victim
+- Criminal prosecution: Under Criminal Code, defamation can lead to imprisonment
+- Court order to delete the content and apologize
+
+**Important:** Even sharing someone else's defamatory post can make you liable. Think before you post, share, or retweet!`,
+    category: 'digital',
+    source: 'Criminal Code Act, Cybercrimes Act 2015, Common Law',
+    penalty: 'Civil damages (millions of Naira possible) and/or up to 2 years imprisonment for criminal defamation',
+    keyPoints: [
+      'Libel is written defamation (includes social media)',
+      'Slander is spoken defamation',
+      'Truth is a complete defense',
+      'Sharing defamatory content also makes you liable',
+    ],
+  },
+  {
+    id: 'digital-005',
+    title: 'Cyberbullying and Online Harassment',
+    summary: 'Using the internet to bully, harass, stalk, or intimidate someone is a criminal offence in Nigeria.',
+    content: `Cyberbullying and online harassment are serious offences under Nigerian law:
+
+**What Is Cyberbullying:**
+- Repeatedly sending threatening or abusive messages
+- Posting embarrassing photos or videos without consent
+- Creating fake profiles to mock or impersonate someone
+- Spreading rumors or lies online to hurt someone
+- Excluding someone from online groups to cause distress
+- Sharing private information to humiliate someone (doxxing)
+
+**What Is Cyber Harassment:**
+- Sending unwanted sexual messages
+- Stalking someone online
+- Making threats of violence
+- Intimidating someone through repeated contact
+- Sharing intimate images without consent ("revenge porn")
+
+**The Law:**
+Under the Cybercrimes Act 2015, Section 24:
+- Sending messages that are grossly offensive, indecent, obscene, or menacing is a crime
+- Using electronic means to harass, bully, or threaten is punishable
+
+**If You Are a Victim:**
+1. Screenshot and save all evidence
+2. Block the person
+3. Report to the platform (Facebook, Twitter, etc.)
+4. Report to the Police (Cybercrime Unit)
+5. Consider filing a complaint with the EFCC
+
+**Protecting Children:**
+Cyberbullying children carries even heavier penalties. Schools and parents should monitor children's online activities.
+
+**Remember:** What happens online has real-world consequences. Treat others online as you would in person.`,
+    category: 'digital',
+    source: 'Cybercrimes Act 2015, Section 24; Violence Against Persons (Prohibition) Act 2015',
+    penalty: 'Fine of up to ₦7 million and/or imprisonment of up to 3 years',
+    keyPoints: [
+      'Cyberbullying is a criminal offence',
+      'Online harassment is punishable by law',
+      'Sharing intimate images without consent is illegal',
+      'Report to Police Cybercrime Unit or EFCC',
+    ],
+  },
+  {
+    id: 'digital-006',
+    title: 'Revenge Porn and Non-Consensual Intimate Images',
+    summary: 'Sharing someone\'s intimate photos or videos without their consent is a serious crime in Nigeria.',
+    content: `Sharing intimate images without consent (commonly called "revenge porn") is a serious criminal offence:
+
+**What It Covers:**
+- Sharing nude or sexual photos/videos of someone without their permission
+- Threatening to share such images to blackmail or intimidate
+- Posting intimate images on social media or websites
+- Sending intimate images via WhatsApp, email, or any platform
+- Creating or distributing "deep fake" intimate content
+
+**Who Can Be a Victim:**
+- Anyone whose intimate images are shared without consent
+- This includes images taken consensually in a relationship
+- Former partners often become victims after breakups
+- Images obtained by hacking or stealing devices
+
+**The Law Says:**
+Under the Cybercrimes Act 2015 and Violence Against Persons (Prohibition) Act 2015:
+- Distributing intimate images without consent is a crime
+- Threatening to distribute such images is also criminal
+- Both the person who shares AND platforms that fail to remove can be liable
+
+**What Victims Can Do:**
+1. Do NOT delete the evidence - screenshot everything
+2. Report to Police Cybercrime Unit immediately
+3. Report to the platform for content removal
+4. Seek a court order for removal
+5. Sue for damages in civil court
+6. Contact organizations like Stand to End Rape (STER) for support
+
+**If You Receive Such Images:**
+- Do NOT share them further
+- Delete them from your device
+- Report the sender to authorities
+- Sharing makes YOU criminally liable too`,
+    category: 'digital',
+    source: 'Cybercrimes Act 2015; Violence Against Persons (Prohibition) Act 2015',
+    penalty: 'Imprisonment of up to 3 years and/or fine; civil damages',
+    keyPoints: [
+      'Sharing intimate images without consent is criminal',
+      'Threatening to share is also a crime',
+      'Victims can seek court orders for removal',
+      'Forwarding such images makes you liable too',
+    ],
+  },
 
   // Business & Commerce
   {

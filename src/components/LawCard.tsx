@@ -12,36 +12,37 @@ export default function LawCard({ law, showCategory = false }: LawCardProps) {
 
   return (
     <Link href={`/law/${law.id}`}>
-      <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 h-full flex flex-col cursor-pointer group">
+      <article className="bg-white border border-[#E0E0E0] hover:border-[#008751] transition-all duration-300 p-6 h-full flex flex-col cursor-pointer group">
         {showCategory && category && (
           <div className="mb-3">
-            <span
-              className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white ${category.color}`}
-            >
+            <span className="inline-flex items-center px-3 py-1 bg-[#008751] text-white text-xs font-medium uppercase tracking-wide">
               {category.icon} {category.name}
             </span>
           </div>
         )}
 
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
+        <h3
+          className="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-[#008751] transition-colors uppercase tracking-wide"
+          style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+        >
           {law.title}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-4 flex-grow">{law.summary}</p>
+        <p className="text-[#6B6B6B] text-sm mb-4 flex-grow leading-relaxed">{law.summary}</p>
 
         <div className="space-y-3">
           {law.penalty && (
-            <div className="flex items-start space-x-2 text-sm">
-              <span className="text-red-500 mt-0.5">⚠️</span>
-              <span className="text-gray-700">
+            <div className="flex items-start space-x-2 text-sm bg-[#D4A843] p-3">
+              <span className="mt-0.5">⚠️</span>
+              <span className="text-[#1A1A1A]">
                 <strong>Penalty:</strong> {law.penalty}
               </span>
             </div>
           )}
 
-          <div className="pt-3 border-t border-gray-100">
-            <p className="text-sm text-green-600 font-medium">
-              {law.keyPoints.length} key points to know →
+          <div className="pt-3 border-t border-[#E0E0E0]">
+            <p className="text-sm text-[#008751] font-semibold uppercase tracking-wide">
+              {law.keyPoints.length} key points →
             </p>
           </div>
         </div>

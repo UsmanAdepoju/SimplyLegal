@@ -123,10 +123,10 @@ export default function Home() {
                 >
                   <span className="text-3xl mb-3 block">{category.icon}</span>
                   <h3
-                    className="font-bold text-lg mb-1 uppercase tracking-wide"
+                    className="font-bold text-base md:text-lg mb-1 uppercase tracking-wide leading-tight"
                     style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                   >
-                    {category.name.split(' ')[0]}
+                    {category.name}
                   </h3>
                   <p className="text-sm opacity-80">
                     {lawCount} {lawCount === 1 ? 'law' : 'laws'}
