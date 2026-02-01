@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import LawQuoteCard from '@/components/LawQuoteCard';
+import SearchResultCard from '@/components/SearchResultCard';
 import { categories } from '@/data/categories';
 import { getLawsByCategory } from '@/data/laws';
 
@@ -50,7 +50,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="py-12 md:py-16 border-b border-[#E0E0E0]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="flex items-center space-x-2 text-sm mb-8 text-[#6B6B6B]">
             <Link href="/" className="hover:text-[#008751] transition-colors">
@@ -78,20 +78,20 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 {category.description}
               </p>
               <p className="text-sm text-[#008751] font-semibold uppercase tracking-wide">
-                {categoryLaws.length} {categoryLaws.length === 1 ? 'law' : 'laws'} explained
+                {categoryLaws.length} {categoryLaws.length === 1 ? 'law' : 'laws'} — click any card to learn more
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Laws Section */}
+      {/* Laws Section - Visual Card Grid */}
       <section className="py-12 md:py-16 bg-[#F5F1E8]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {categoryLaws.length > 0 ? (
-            <div className="space-y-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryLaws.map((law, index) => (
-                <LawQuoteCard
+                <SearchResultCard
                   key={law.id}
                   law={law}
                   variant={cardVariants[index % cardVariants.length]}
@@ -140,10 +140,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   >
                     <span className="text-2xl block mb-2">{cat.icon}</span>
                     <p
-                      className="font-bold text-sm uppercase tracking-wide"
+                      className="font-bold text-sm uppercase tracking-wide leading-tight"
                       style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
                     >
-                      {cat.name.split(' ')[0]}
+                      {cat.name}
                     </p>
                   </Link>
                 );

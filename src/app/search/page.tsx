@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
-import LawCard from '@/components/LawCard';
+import SearchResultCard from '@/components/SearchResultCard';
 import { searchLaws } from '@/data/laws';
 import { categories } from '@/data/categories';
 
@@ -12,6 +12,9 @@ function SearchResults() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
   const results = query ? searchLaws(query) : [];
+
+  // Cycle through card variants for visual variety
+  const cardVariants: Array<'green' | 'mustard' | 'dark'> = ['green', 'mustard', 'dark'];
 
   return (
     <div className="min-h-screen bg-white">
@@ -44,9 +47,13 @@ function SearchResults() {
               </div>
 
               {results.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {results.map(law => (
-                    <LawCard key={law.id} law={law} showCategory />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {results.map((law, index) => (
+                    <SearchResultCard
+                      key={law.id}
+                      law={law}
+                      variant={cardVariants[index % cardVariants.length]}
+                    />
                   ))}
                 </div>
               ) : (
@@ -74,7 +81,7 @@ function SearchResults() {
                 Search Nigerian Laws
               </h2>
               <p className="text-[#6B6B6B] mb-8">
-                Enter a keyword or phrase to find relevant laws and legal information.
+                Enter a keyword to find laws explained simply.
               </p>
             </div>
           )}
@@ -85,10 +92,10 @@ function SearchResults() {
               className="text-lg font-bold text-[#1A1A1A] mb-4 uppercase tracking-wide"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
-              {query ? 'Try searching in these categories' : 'Popular Categories'}
+              {query ? 'Browse Categories' : 'Popular Categories'}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {categories.map(category => (
+              {categories.slice(0, 8).map(category => (
                 <Link
                   key={category.id}
                   href={`/category/${category.id}`}
@@ -99,30 +106,6 @@ function SearchResults() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Search Tips */}
-          <div className="mt-12 bg-[#008751] text-white p-6">
-            <h3
-              className="text-lg font-bold mb-4 uppercase tracking-wide"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-            >
-              Search Tips
-            </h3>
-            <ul className="space-y-2 text-sm opacity-90">
-              <li className="flex items-start">
-                <span className="text-[#D4A843] mr-2">→</span>
-                Use specific terms like &quot;minimum wage&quot; or &quot;tenant rights&quot;
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#D4A843] mr-2">→</span>
-                Try different variations of your search term
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#D4A843] mr-2">→</span>
-                Browse categories if you&apos;re not sure what to search for
-              </li>
-            </ul>
           </div>
         </div>
       </section>
