@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Playfair_Display, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -10,9 +10,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-space',
   display: 'swap',
 });
 
@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased bg-[#FDF8F3] font-sans">
+    <html lang="en" className={`${playfair.variable} ${spaceGrotesk.variable}`}>
+      <body className="antialiased bg-[#FDF8F3]" style={{ fontFamily: "var(--font-space), system-ui, sans-serif" }}>
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
